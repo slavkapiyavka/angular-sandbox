@@ -1,1 +1,7 @@
-/*  */
+.link {
+    color: black;
+}
+
+.link_active {
+    color: chocolate;
+}
