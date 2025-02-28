@@ -7,7 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint && npm run lint:styles",
+    "lint:fix": "ng lint --fix && npm run lint:styles:fix",
+    "lint:styles": "stylelint \"src/**/*.css\"",
+    "lint:styles:fix": "stylelint \"src/**/*.css\" --fix",
+    "format": "prettier --write \"src/**/*.{ts,css,html}\""
   },
   "private": true,
   "dependencies": {
@@ -39,6 +43,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.5.2",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^37.0.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "8.23.0"
   }
