@@ -11,4 +11,13 @@ export const routes: Routes = [
         path: 'template-driven-form',
         component: TemplateDrivenFormComponent
     },
+    {
+        path: '',
+        redirectTo: '/reactive-form',
+        pathMatch: 'full'
+    },
+    {
+        path: '**',
+        component: ReactiveFormComponent
+    },
 ];
