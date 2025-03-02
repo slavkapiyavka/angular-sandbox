@@ -1,1 +1,5 @@
-<p>reactive-form works!</p>
+<form [formGroup]="form">
+    <input type="email" formControlName="email" class="form-control" placeholder="e-mail">
+    <input type="password" formControlName="password" class="form-control" placeholder="Пароль">
+    <button class="button" type="submit">авторизоваться</button>
+</form>
